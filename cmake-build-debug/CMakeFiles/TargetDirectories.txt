@@ -1,2 +1,0 @@
-C:/Users/ambar/OneDrive/Documents/Junior Year/Algorithms/Cycle-Detection-Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ambar/OneDrive/Documents/Junior Year/Algorithms/Cycle-Detection-Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,72 +1,50 @@
 #include <iostream>
 #include <unordered_set>
 
+using std::unordered_set;
 using std::cout;
 using std::endl;
 
-//Linked List Node
-struct node{
-    int data;
-    struct node* next;
-};
 
-void push(struct node** listHead, int new_data){
-    struct node* newNode = new node;
+int FloydsFindDup(int* nums, int numsSize){
+    int tortoise;   //slow pointer that moves by 1 space
+    int hare;       //fast pointer that moves by 2 spaces
 
-    newNode->data = new_data;
+    tortoise = nums[0];
+    hare = nums[nums[0]];
 
-    newNode->next = (*listHead);
-
-    (*listHead) = newNode;
-}
-
-bool detectCycle(node* head){
-    node* curr = head;
-    std::unordered_set<node*> hashTable;
-
-    while(curr){
-        if(hashTable.find(curr) != hashTable.end()){
-            return true;
-        }
-
-        hashTable.insert(curr);
-
-        curr = curr->next;
+    while(tortoise != hare){            //while the pointers do not point to the same number
+        tortoise = nums[tortoise];
+        hare = nums[nums[hare]];
     }
 
-    return false;
+    //Find the beginning of the cycle, which is the duplicate number
+    hare = 0;
+    while(tortoise != hare){
+        tortoise = nums[tortoise];
+        hare = nums[hare];
+    }
+    return hare;
 }
 
-bool Floyds(node* head){
-    node* tortoise = head, *hare = head;
+int hashFindDup(int* nums, int numSize){
+    unordered_set<int> numbers;
 
-    while(hare && hare->next){
-        tortoise = tortoise->next;
-        hare = hare->next->next;
-
-        if(tortoise==hare)
-            return true;
+    for(int i = 0; i < numSize; i++){
+        if(numbers.find(nums[i]) == numbers.end())
+            numbers.insert(nums[i]);
+        else
+            return nums[i];
     }
-
-    return false;
 }
 
 
 int main() {
-    int dataVals[] = {1,2,3,4,5};
+    int dataVals[] = {1,3,4,2,1};
     int n = sizeof(dataVals) / sizeof(dataVals[0]);
 
-    node* head = nullptr;
-    for(int i = n-1; i >= 0; i--){
-        push(&head, dataVals[i]);
-    }
+    cout << "Duplicate number: " << hashFindDup(dataVals,n) << endl;
 
-    head->next->next->next->next->next = head->next->next;
-
-    if(Floyds(head))
-        cout << "Cycle found" << endl;
-    else
-        cout << "Cycle not found" << endl;
 
     return 0;
 }

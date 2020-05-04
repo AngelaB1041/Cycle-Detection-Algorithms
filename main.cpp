@@ -7,7 +7,10 @@ using std::cout;
 using std::endl;
 
 int main() {
+    //Array with one duplicate number
     int dataVals[] = {1,3,4,2,5,6,7,9,8,19,17,14,13,12,10,15,16,18,20,11,19};
+
+    //Get size of array
     int n = sizeof(dataVals) / sizeof(dataVals[0]);
 
     dupFinder letsLook;

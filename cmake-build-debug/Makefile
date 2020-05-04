@@ -122,6 +122,33 @@ Cycle_Detection_Algorithms/fast:
 	$(MAKE) -f CMakeFiles\Cycle_Detection_Algorithms.dir\build.make CMakeFiles/Cycle_Detection_Algorithms.dir/build
 .PHONY : Cycle_Detection_Algorithms/fast
 
+dupFinder.obj: dupFinder.cpp.obj
+
+.PHONY : dupFinder.obj
+
+# target to build an object file
+dupFinder.cpp.obj:
+	$(MAKE) -f CMakeFiles\Cycle_Detection_Algorithms.dir\build.make CMakeFiles/Cycle_Detection_Algorithms.dir/dupFinder.cpp.obj
+.PHONY : dupFinder.cpp.obj
+
+dupFinder.i: dupFinder.cpp.i
+
+.PHONY : dupFinder.i
+
+# target to preprocess a source file
+dupFinder.cpp.i:
+	$(MAKE) -f CMakeFiles\Cycle_Detection_Algorithms.dir\build.make CMakeFiles/Cycle_Detection_Algorithms.dir/dupFinder.cpp.i
+.PHONY : dupFinder.cpp.i
+
+dupFinder.s: dupFinder.cpp.s
+
+.PHONY : dupFinder.s
+
+# target to generate assembly for a file
+dupFinder.cpp.s:
+	$(MAKE) -f CMakeFiles\Cycle_Detection_Algorithms.dir\build.make CMakeFiles/Cycle_Detection_Algorithms.dir/dupFinder.cpp.s
+.PHONY : dupFinder.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... Cycle_Detection_Algorithms
 	@echo ... rebuild_cache
+	@echo ... dupFinder.obj
+	@echo ... dupFinder.i
+	@echo ... dupFinder.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

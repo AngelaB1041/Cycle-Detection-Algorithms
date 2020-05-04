@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/ambar/OneDrive/Documents/Junior Year/Algorithms/Cycle-Detection-Algorithms/dupFinder.cpp">
+			<Option target="Cycle_Detection_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/ambar/OneDrive/Documents/Junior Year/Algorithms/Cycle-Detection-Algorithms/dupFinder.h">
+			<Option target="Cycle_Detection_Algorithms"/>
+		</Unit>
 		<Unit filename="C:/Users/ambar/OneDrive/Documents/Junior Year/Algorithms/Cycle-Detection-Algorithms/main.cpp">
 			<Option target="Cycle_Detection_Algorithms"/>
 		</Unit>
